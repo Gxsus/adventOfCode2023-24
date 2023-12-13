@@ -20,12 +20,6 @@ print(ris)
 ris = 220
 card_wins = []
 
-
-def sum_tickets(ris, card_wins, t):
-    ris += card_wins[t]
-    for i in range(t, t + card_wins[t]):
-        sum_tickets(ris, card_wins, t + i)
-
 with open('input.txt', 'r') as file:
     for i in range(1, 221):
         numbers = file.readline().strip().replace("Card {:3d}: ".format(i), '').split(' | ')
